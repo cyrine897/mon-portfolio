@@ -1,0 +1,30 @@
+<section id="portfolio" class="portfolio section">
+  <div class="container section-title">
+    <h2>Portfolio</h2>
+    <p>Découvrez quelques réalisations</p>
+  </div>
+
+  <div class="slideshow-container">
+    <div class="portfolio-slide fade" *ngFor="let item of portfolioItems; let i = index">
+      <div class="portfolio-img">
+        <img [src]="item.img" class="img-fluid" alt="Portfolio Image">
+      </div>
+      <div class="portfolio-info">
+        <h4>{{item.title}}</h4>
+        <p>{{item.description}}</p>
+        <a [href]="item.img" class="glightbox preview-link" [attr.data-gallery]="item.category">
+          <i class="bi bi-zoom-in"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <a class="prev" (click)="plusSlide(-1)">&#10094;</a>
+    <a class="next" (click)="plusSlide(1)">&#10095;</a>
+  </div>
+
+  <!-- Dots -->
+  <div style="text-align:center; margin-top:15px">
+    <span class="dot" *ngFor="let item of portfolioItems; let i = index" (click)="currentSlide(i+1)"></span>
+  </div>
+</section>
