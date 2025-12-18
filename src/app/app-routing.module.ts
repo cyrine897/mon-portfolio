@@ -6,6 +6,7 @@ import { AboutComponent } from './about/about.component';
 import { ResumeComponent } from './resume/resume.component';
 import { ContactComponent } from './contact/contact.component';
 import { AccueilComponent } from './accueil/accueil.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,8 @@ const routes: Routes = [
   { path: 'resume', component: ResumeComponent },
   { path: 'contact', component: ContactComponent},
   { path: 'accueil', component: AccueilComponent},
+  {path: 'portfolio' , component:PortfolioComponent},
+
   { path: 'about/app', component: AboutComponent, data: { filter: 'app' } },
   { path: 'about/product', component: AboutComponent, data: { filter: 'product' } },
   { path: 'about/branding', component: AboutComponent, data: { filter: 'branding' } },

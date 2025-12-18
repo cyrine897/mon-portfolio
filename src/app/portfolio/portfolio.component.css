@@ -1,0 +1,333 @@
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: rgba(17, 17, 17, 0.8); /* noir avec transparence */
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  backdrop-filter: blur(8px); /* flou de fond */
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.3s;
+}
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 2px;
+    }
+
+   /* Menu */
+.navmenu ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.navmenu a {
+  color: #fff;                /* liens blancs */
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navmenu a:hover,
+.navmenu a.active {
+  color: #ff0048;             /* accent rose/rouge */
+}
+
+/* Icônes sociales */
+.header-social i {
+  color: #fff;                /* icônes blanches */
+  font-size: 1.3rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header-social i:hover {
+  color: #ff0048;
+}
+
+/* Responsive (optionnel) */
+@media (max-width: 768px) {
+  .navmenu ul {
+    flex-direction: column;
+    background: #111;
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
+
+/* ====hero==== */
+.hero-container {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 40px auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Reference card */
+.reference-card {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  background: rgba(0, 0, 0, 0.9);
+  color: #ffffff;
+  padding: 30px;
+  width: 320px;
+  border-radius: 14px;
+}
+
+.reference-card h3 {
+  margin: 0 0 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.ref-block {
+  margin-bottom: 22px;
+}
+
+.years {
+  font-size: 13px;
+  color: #cccccc;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 6px 0 4px;
+}
+
+.school {
+  font-size: 14px;
+  color: #9ecbff;
+}
+
+/* Bottom text */
+.intro-text {
+  text-align: center;
+  margin: 60px auto 40px;
+  max-width: 900px;
+}
+
+.intro-text p {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* ===== Body ===== */
+body {
+  background: #ffffff;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Container principal ===== */
+.about-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+/* ===== Section Intro ===== */
+.intro-section h1 {
+  font-size: 36px;
+  font-weight: 700;
+  border-bottom: 2px solid #000;
+  display: inline-block;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+.intro-section p {
+  max-width: 700px;
+  line-height: 1.8;
+  font-size: 16px;
+  color: #111;
+}
+
+/* ===== Section Expériences ===== */
+
+
+
+.experiences-header {
+  margin-bottom: 50px;
+}
+
+.experiences-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  border-bottom: 2px solid #000;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+/* ===== Section ===== */
+/* ===== SECTION ===== */
+.experiences-section {
+  padding: 80px 20px;
+  background: #ffffff;
+}
+
+.experiences-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.section-subtitle {
+  max-width: 700px;
+  margin: 15px auto 0;
+  color: #555;
+  font-size: 16px;
+}
+
+/* ===== TIMELINE CONTENEUR ===== */
+.timeline {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 60px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #e5e7eb;
+}
+
+/* ===== CARTE EXPERIENCE ===== */
+.experience-card {
+  position: relative;
+  display: flex;
+  gap: 24px;
+  background: #f4f3f6;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  margin-bottom: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+}
+
+/* ===== POINT TIMELINE ===== */
+.timeline-dot {
+  position: absolute;
+  left: -38px;
+  top: 32px;
+  width: 14px;
+  height: 14px;
+  background: #2563eb;
+  border-radius: 50%;
+}
+
+/* ===== LOGO ===== */
+.experience-logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 14px;
+  object-fit: contain;
+  background: #f5f7fa;
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+  flex-shrink: 0;
+}
+
+/* ===== TEXTE ===== */
+.experience-info h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.company-name {
+  font-weight: 600;
+  color: #2563eb;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.experience-date {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.experience-info p {
+  margin-bottom: 10px;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.experience-info ul {
+  padding-left: 18px;
+}
+
+.experience-info ul li {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 0;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+
+  .experience-card {
+    flex-direction: column;
+  }
+
+  .timeline-dot {
+    display: none;
+  }
+}

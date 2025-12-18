@@ -7,6 +7,10 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent  {
+
+  goToProjects() {
+    this.router.navigate(['/about']);
+  }
  currentFilter: string = '*';
   portfolioItems = [
     { id: 1, type: 'app', title: 'Récolter les succès : retour sur nos projets', img: 'rotar1.PNG' },
@@ -24,7 +28,12 @@ export class AboutComponent  {
         { id: 3, type: 'branding', title: 'Réunion : "Récolter les succès : retour sur nos projets', img: 'rotar11.PNG' },
     { id: 3, type: 'branding', title: 'Formation : "Leadership avancé et mentorat', img: 'rotar12.PNG' },
     { id: 3, type: 'branding', title: 'Formation  : "Entrepeneuriat"', img: 'rotar13.PNG' },
-
+{
+    id: 4, 
+    type: 'video', 
+    title: 'Vidéo du club Rotaract', 
+    video: 'assets/Video/Video.mp4'
+  }
     // ... tous les items
   ];
 

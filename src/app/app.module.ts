@@ -10,6 +10,7 @@ import { ResumeComponent } from './resume/resume.component';
 import { ContactComponent } from './contact/contact.component';
 import { register } from 'swiper/element/bundle';
 import { AccueilComponent } from './accueil/accueil.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 register();
 
@@ -25,7 +26,8 @@ const routes: Routes = [
     AboutComponent,
     ResumeComponent,
     ContactComponent,
-    AccueilComponent
+    AccueilComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,

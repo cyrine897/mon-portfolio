@@ -26,7 +26,7 @@
     <li><a routerLink="/resume">Parcours Professionnel
 
     </a></li>
-    <li><a routerLink="/portfolio">Portfolio</a></li>
+    <li><a routerLink="/portfolio">Experience</a>
     <li><a routerLink="/contact">Contact</a></li>
   </ul>
 </nav>
@@ -110,47 +110,7 @@
 </section>
 
   <!-- About Section -->
-  <section id="about" class="about-content">
-    <div class="">
-       <h2 class="title">Présentation</h2>
-    </div>
-
-    <div class="container">
-      <div class="row gy-4 justify-content-center">
-        <div class="col-lg-4">
-          <img src="assets/img/ImPort.png" class="img-fluid rounded" alt="Profile Image">
-        </div>
-        <div class="col-lg-8 content">
-          <p class="fst-italic py-3" style="color:#010c0a;">
-            Passionnée par le développement logiciel et les pratiques DevOps, avec une expertise en administration des systèmes, cloud computing et sécurité informatique. Capable de concevoir, déployer et sécuriser des infrastructures complexes tout en automatisant les processus.
-          </p>
-          <div class="row">
-            <div class="col-lg-6">
-              <ul>
-                <li><i class="bi bi-chevron-right" style="color:#e90d15;"></i> <strong>Date de Naissance:</strong> <span>29 Avril 2000</span></li>
-                <li><i class="bi bi-chevron-right" style="color:#e90d15;"></i> <strong>LinkedIn:</strong> <span>https://www.linkedin.com/in/cyrine-mezzi-208198223/</span></li>
-                <li><i class="bi bi-chevron-right" style="color:#e90d15;"></i> <strong>Téléphone:</strong> <span>+216 50 684 446 | +216 93 323 941 </span></li>
-                <li><i class="bi bi-chevron-right" style="color:#e90d15;"></i> <strong>Adresse:</strong> <span>Rades , Tunis</span></li>
-              </ul>
-            </div>
-            <div class="col-lg-6">
-              <ul>
-                <li><i class="bi bi-chevron-right" style="color:#e90d15;"></i> <strong>Age:</strong> <span>25</span></li>
-                <li><i class="bi bi-chevron-right" style="color:#e90d15;"></i> <strong>Diplomes:</strong> <span>Licence&Ingenierie</span></li>
-                <li><i class="bi bi-chevron-right" style="color:#e90d15;"></i> <strong>Email:</strong> <span>cyrine.mezzi@esprit.tn | <br />
-
- mezzicyrine84@gmail.com</span></li>
-                <li><i class="bi bi-chevron-right" style="color:#e90d15;"></i> <strong>Freelance:</strong> <span>Disponible</span></li>
-              </ul>
-            </div>
-          </div>
-          <p class="py-3" style="color:#141414;">
-            Forte expérience en intégration continue, déploiement automatisé, gestion des serveurs et sécurité réseau. Toujours à la recherche de solutions innovantes pour améliorer la performance et la sécurité des systèmes.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- Portfolio Section -->
 <section id="portfolio" class="portfolio section">
@@ -357,7 +317,13 @@
   </div>
 </div>
 -->
+ <div class="container section-title">
+    <h2>Vie Sociale</h2>
+    <p>J’ai occupé le poste de responsable du développement personnel au Rotaract Club La Marsa Plage, où j’ai animé des activités visant à renforcer les compétences interpersonnelles, la communication et le leadership des membres du club.</p>
+    <p>Découvrez quelques-unes de mes réalisations et contributions dans différents projets sociaux et communautaires. Ces expériences reflètent mon engagement, ma créativité et ma capacité à collaborer efficacement avec les autres.</p>
 
+    <!-- Section Expérience Rotaract -->
+</div>
 <div id="portfolio-loader">
   <img src="assets/img/loader.gif" alt="Loading...">
 </div>
@@ -365,11 +331,22 @@
   <li (click)="setFilter('app')" [class.filter-active]="currentFilter==='app'">Réunion</li>
   <li (click)="setFilter('product')" [class.filter-active]="currentFilter==='product'">Action</li>
   <li (click)="setFilter('branding')" [class.filter-active]="currentFilter==='branding'">Evenements</li>
-    <li (click)="setFilter('branding')" [class.filter-active]="currentFilter==='branding'">Video</li>
-      <li (click)="setFilter('*')" [class.filter-active]="currentFilter==='*'">Tout</li>
+  <li (click)="setFilter('video')" [class.filter-active]="currentFilter==='video'">Vidéo</li>
+ <li (click)="setFilter('*')" [class.filter-active]="currentFilter==='*'">Tout</li>
 
 
 </ul>
+<div class="portfolio-container">
+  <div *ngFor="let item of portfolioItems" [hidden]="currentFilter !== '*' && currentFilter !== item.type" class="portfolio-item">
+    
+    <!-- Si c'est une vidéo -->
+    <video *ngIf="item.video" controls width="100%">
+      <source [src]="item.video" type="video/mp4">
+      Votre navigateur ne supporte pas la vidéo.
+    </video>
+
+  </div>
+</div>
 
 <div class="row gy-4">
   <div class="col-lg-4 col-md-6" *ngFor="let item of getFilteredItems()">

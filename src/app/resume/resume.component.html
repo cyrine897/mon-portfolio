@@ -8,6 +8,7 @@
   <meta name="description" content="">
   <meta name="keywords" content="">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
 
@@ -25,8 +26,9 @@
     <li><a routerLink="/resume" class="active"
         >Parcours Professionnel
     </a></li>
-    <li><a routerLink="/portfolio">Portfolio</a></li>
-    <li><a routerLink="/contact">Contact</a></li>
+    <li><a routerLink="/portfolio">Experience</a>
+    <li><a routerLink="/contact">Contact </a>
+
   </ul>
 </nav>
 
@@ -292,16 +294,13 @@
 </section>
 <!--section Réalisations-->
 <section class="realisations-section">
-  <div class="realisations-header">
-    <span class="dot"></span>
-    <span class="section-label">Réalisations</span>
-    <h1>Explorez mes réalisations</h1>
-    <p class="subtitle">
-      Découvrez une sélection de créations uniques, conçues avec soin et expertise.
-    </p>
+     <div class="container section-title">
+    <h2>Réalisations</h2>
+    <p>Explorez mes réalisations</p>
   </div>
-
-  <div class="cards-container">
+    <span class="dot"></span>
+    
+    <div class="cards-container">
     <div class="card" *ngFor="let item of realisations">
       <img [src]="item.image" alt="Image réalisation" />
       <h3>{{ item.title }}</h3>
@@ -344,6 +343,12 @@
   <p>
     <strong>Technologies :</strong> Symfony, Twig, PHP, MySQL, HTML, CSS, JavaScript
   </p>
+  <div class="project-links">
+  <a href="https://github.com/cyrine897/ProjetEsprit" target="_blank">
+    <i class="fab fa-github"></i>
+  </a>
+</div>
+
 </div>
 
       
@@ -425,13 +430,14 @@
           • Collaboration avec équipes système & réseau pour incidents complexes<br>
           • <strong>Technologies :</strong> Windows Server, Active Directory, Office 365, Azure AD, ITSM, TCP/IP
         </p>
-       <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+       <a href="https://www.linkedin.com/feed/update/urn:li:activity:7353021599534477312/" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+
 
       </div>
 
       <!-- EXP 2 : Ingénieur DevOps -->
       <div class="timeline-item">
-        <h3>Stagiaire DevOps – Application Cloud-Native</h3>
+        <h3>Stagiaire  DevOps – Application Cloud-Native</h3>
         <h4>DefensyLab – Tunisie</h4>
         <span class="date">Mars 2025 – Octobre 2025</span>
         <p>
@@ -441,7 +447,12 @@
           • Monitoring : Prometheus + Grafana<br>
           • <strong>Technologies :</strong> Azure, AKS, Helm, Docker, Grafana, Prometheus, Trivy
         </p>
-        <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+        <div class="project-links">
+  <a href="https://github.com/cyrine897/FrontendPFE" target="_blank">
+    <i class="fab fa-github"></i>
+  </a>
+</div>
+
 
       </div>
 
@@ -456,7 +467,11 @@
           • Monitoring avancé Grafana & Prometheus<br>
           • <strong>Technologies :</strong> Spring Boot 3.3, Angular 16, Docker, Jenkins, Grafana, GitLab
         </p>
-        <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+<div class="project-links">
+  <a href="https://github.com/cyrine897/DoctolibAngular" target="_blank">
+    <i class="fab fa-github"></i>
+  </a>
+</div>
 
       </div>
 
@@ -470,24 +485,30 @@
           • Système OTP, notifications email & SMS<br>
           • <strong>Technologies :</strong> Spring Boot, Angular, JavaScript, Swagger, Git
         </p>
-        <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+<div class="project-links">
+  <a href="https://github.com/cyrine897/Doctolib-BackEnd" target="_blank">
+    <i class="fab fa-github"></i>
+  </a>
+</div>
 
       </div>
 
       <!-- EXP 5 : Full-Stack Developer – CNAM -->
       <div class="timeline-item">
         <h3>Développeuse Full-Stack</h3>
-        <h4>CNAM – Tunisie</h4>
+        <h4>Projet E-commerce CarteLabess CNAM – Tunisie</h4>
         <span class="date">Février 2022 – Mai 2022</span>
         <p>
           • API REST sécurisée (employés, congés, paie, performance)<br>
           • Intégration JWT & OAuth2<br>
           • Tableau de bord temps réel en Angular<br>
+          • Paiement sécurisé Stripe<br>
           • <strong>Technologies :</strong> Spring Boot, Angular, Oracle, Bootstrap, GitLab
         </p>
         <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
 
       </div>
+
 
       <!-- EXP 6 : Stage Réseaux -->
       <div class="timeline-item">
@@ -503,32 +524,9 @@
 
       </div>
 
-      <!-- EXP 7 : Solution Express -->
-      <div class="timeline-item">
-        <h3>Développeuse Full-Stack</h3>
-        <h4>Solution Express – Tunisie</h4>
-        <span class="date">Février 2023 – Mai 2024</span>
-        <p>
-          • Analyse des besoins & propositions techniques<br>
-          • Rédaction des cahiers des charges<br>
-          • Coordination avec équipes techniques<br>
-        </p>
-        <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-
-      </div>
+     
 
 
-           <!-- EXP 7 : Solution Express -->
-      <div class="timeline-item">
-        <h3>Projet E-commerce CarteLabess</h3>
-        <h4>ISTIC</h4>
-        <span class="date">Février 2022 – Mai 2022</span>
-        <p>
-          • Boutique en ligne complète<br>
-          • Paiement sécurisé Stripe<br>
-          • <strong>Technologies :</strong> Angular, Spring Boot, PHP, MySQL, JS
-        </p>
-      </div>
 
     </div>
   </div>

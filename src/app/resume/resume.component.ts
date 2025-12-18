@@ -14,9 +14,9 @@ export class ResumeComponent {
   ];
 
     realisations = [
-    { title: 'Summit Partners', designation: 'Design', image: 'assets/img/forum2.PNG' },
-    { title: 'Apex Strategies', designation: 'Stratégie visuelle', image: 'assets/img/sahty1.PNG' },
-    { title: 'Cozycasa', designation: 'Illustration 3D', image: 'assets/img/activities1.PNG' },
-    { title: 'Mars', designation: 'Art minimaliste', image: 'assets/img/labes.PNG' },
+    { title: 'Application Forum', designation: 'Développement d’application web / Forum interactif', image: 'assets/img/Proj1.PNG'}, 
+    { title: 'SahtyApp', designation: 'Application mobile de santé', image: 'assets/img/proj2.PNG'}, 
+    { title: 'Carte Labess', designation: 'Gestion de données sociales et administratives', image: 'assets/img/proje3.PNG'}, 
+    { title: 'VisiteTunisia', designation: 'Plateforme touristique web', image: 'assets/img/projet4.PNG'}, 
   ];
 }

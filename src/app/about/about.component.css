@@ -1,13 +1,19 @@
-   .header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 1rem 2rem;
-      background: rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-    }
 
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: rgba(17, 17, 17, 0.8); /* noir avec transparence */
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  backdrop-filter: blur(8px); /* flou de fond */
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.3s;
+}
     .nav-wrapper {
       display: flex;
       align-items: center;
@@ -21,34 +27,47 @@
       letter-spacing: 2px;
     }
 
-    .navmenu ul {
-      display: flex;
-      list-style: none;
-      gap: 2rem;
-    }
+   /* Menu */
+.navmenu ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
 
-    .navmenu a {
-      color: white;
-      font-weight: 500;
-      transition: 0.3s;
-    }
+.navmenu a {
+  color: #fff;                /* liens blancs */
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
 
-    .navmenu a:hover,
-    .navmenu a.active {
-      color: #ff0048;
-    }
+.navmenu a:hover,
+.navmenu a.active {
+  color: #ff0048;             /* accent rose/rouge */
+}
 
-    .header-social i {
-      color: white;
-      font-size: 1.3rem;
-      margin-left: 1rem;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+/* Icônes sociales */
+.header-social i {
+  color: #fff;                /* icônes blanches */
+  font-size: 1.3rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-    .header-social i:hover {
-      color: #ff0048;
-    }
+.header-social i:hover {
+  color: #ff0048;
+}
+
+/* Responsive (optionnel) */
+@media (max-width: 768px) {
+  .navmenu ul {
+    flex-direction: column;
+    background: #111;
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
 
     .main {
       margin-top: 100px;
@@ -230,6 +249,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
+  margin-top: -50px;
 }
 
 .about-images img {
@@ -279,23 +299,26 @@
   gap: 20px; /* espace entre chaque image */
   justify-content: center;
   align-items: center;
-  margin-top: -50px;
 }
 
 .about-images img {
- 
-   width: 650px;      /* largeur du carré */
-  height: 520px;     /* height ajustée ici */
-  object-fit: cover; /* respecte le cadrage */
+  width: 650px;
+  height: 520px;
+  object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  
+  /* Effet sombre */
+  filter: brightness(0.55) contrast(1.1);
+  transition: filter 0.4s ease, transform 0.4s ease;
 }
 
-
-/* Rendre la 3ème photo plus claire */
-.about-images img.light-img {
-  filter: brightness(1.25); /* +25% de luminosité */
+/* Effet hover (optionnel mais pro) */
+.about-images img:hover {
+  filter: brightness(0.75) contrast(1.1);
+  transform: scale(1.02);
 }
+
 
 
 .about-content {
