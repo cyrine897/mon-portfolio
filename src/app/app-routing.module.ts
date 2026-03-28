@@ -7,6 +7,7 @@ import { ResumeComponent } from './resume/resume.component';
 import { ContactComponent } from './contact/contact.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ChatbotComponent } from './chatbot/chatbot.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent},
   { path: 'accueil', component: AccueilComponent},
   {path: 'portfolio' , component:PortfolioComponent},
+  {path: 'chat' , component:ChatbotComponent},
 
   { path: 'about/app', component: AboutComponent, data: { filter: 'app' } },
   { path: 'about/product', component: AboutComponent, data: { filter: 'product' } },

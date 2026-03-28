@@ -1,13 +1,31 @@
-<div class="chat-container">
+<!-- Bouton flottant -->
+<div class="chat-icon" (click)="toggleChat()">
+  💬
+</div>
 
-  <div class="messages">
-    <div *ngFor="let msg of messages">
-      <b>{{msg.sender}}:</b> {{msg.text}}
+<!-- Fenêtre chat -->
+<div class="chat-window" *ngIf="isOpen">
+
+  <div class="chat-header">
+    <span>💬 Chat avec Cyrine</span>
+  </div>
+  <div class="chat-messages">
+    <div *ngFor="let msg of messages"
+         [ngClass]="{'user-msg': msg.sender==='user', 'bot-msg': msg.sender==='bot'}">
+
+      <div class="avatar">
+        <img *ngIf="msg.sender==='bot'" src="assets/img/robot.jpg"/>
+      </div>
+
+      <div class="message">{{msg.text}}</div>
     </div>
   </div>
 
-  <input [(ngModel)]="message" placeholder="Posez votre question..." />
-
-  <button (click)="sendMessage()">Envoyer</button>
+  <div class="chat-input">
+    <input [(ngModel)]="message"
+           (keyup.enter)="sendMessage()"
+           placeholder="Écris un message..." />
+    <button (click)="sendMessage()">Envoyer</button>
+  </div>
 
 </div>
